@@ -3,16 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/MyTuhinAcc/Jenkins-Archive-Pipeline.git'
-            }
-        }
-
         stage('Generate Report') {
             steps {
-                bat 'python app.py'
+                bat '"C:\\Users\\TUHIN BHATTACHARYA\\AppData\\Local\\Programs\\Python\\Python312\\python.exe" app.py'
             }
         }
 
